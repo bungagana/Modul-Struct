@@ -1,0 +1,154 @@
+// Bunga Laealatu muna
+// 21102010
+
+#include <iostream>
+
+using namespace std;
+
+
+struct hewan{
+    string Nama_hewan;
+    string jeniskelamin;
+    string caraberkembangbiak;
+    string alatpernafasan;
+    string tempathidup;
+    bool Karnivora=true;
+};
+struct hewandarat{
+    hewan darat;
+    int jumlahkaki;
+    bool apakahmenyusui = true;
+    string suara;
+}hewan_darat;
+struct hewanlaut{
+    hewan laut;
+    string bentuksirip;
+    string bentukpertahanan;
+
+}hewan_laut;
+
+void utama(){
+    cout << endl;
+    cout << "===========================================" << endl;
+    cout << "1. Hewan Laut" << endl;
+    cout << "2. Hewan Darat" << endl;
+
+    cout << "Masukan pilihan  : ";
+}
+int main()
+{
+    int pilihan;
+
+    do {
+    utama();
+    cin >> pilihan;
+    switch (pilihan){
+
+    case 1:
+        int n;
+        cout << "masukan data:";
+        cin >> n;
+    for (int i=0; i<n; i++){
+
+        cout << endl;
+        cout << " <<<< Anda Memilih Hewan Laut >>>> " << endl << endl;
+        cout << "  Nama Hewan: ";
+        getline(cin.ignore(),(hewan_laut.laut.Nama_hewan));
+        cout << "  Jenis Kelamin: " ;
+        cin  >> hewan_laut.laut.jeniskelamin;
+        cout << "  Cara Berkembang Biak: ";
+        cin  >> hewan_laut.laut.caraberkembangbiak;
+        cout << "  Alat Pernafasan: " ;
+        cin  >> hewan_laut.laut.alatpernafasan;
+        cout << "  Tempat Hidup: " ;
+        cin  >> hewan_laut.laut.tempathidup;
+        cout << "  Apakah Karnivora(1/0): ";
+        cin  >> hewan_laut.laut.Karnivora;
+        cout << "  Bentuk sirip: ";
+        cin  >> hewan_laut.bentuksirip;
+        cout << "  Bentuk Pertahanan: ";
+        getline(cin.ignore(),( hewan_laut.bentukpertahanan));}
+         system ("CLS");
+
+            for (int i=0; i<n; i++){
+                cout << "=====================================" << endl;
+                cout << "               HEWAN LAUT            " << endl;
+                cout << "=====================================" << endl;
+                cout << " 1. Hewan ini bernama : " << hewan_laut.laut.Nama_hewan << endl;
+                cout << " 2. berjenis kelamin : " << hewan_laut.laut.jeniskelamin << endl;
+                cout << " 3. Berkembang biak dengan cara : "<< hewan_laut.laut.caraberkembangbiak << endl;
+                cout << " 4. Bernafas menggunakan : " << hewan_laut.laut.alatpernafasan << endl;
+                cout << " 5. Termasuk jenis hewan karnivora?(1/0) : ";
+                    if (hewan_laut.laut.Karnivora == true ){
+                        cout << " IYA " << endl;
+                        } else {
+                        cout << " TIDAK " << endl;
+                        }
+                cout << " 6. Siripnya berbentuk : " << hewan_laut.bentuksirip << endl;
+                cout << " 7. Bertahan dengan cara : " << hewan_laut.bentukpertahanan << endl;
+
+        }
+
+    break;
+
+    case 2:
+        int a;
+        cout << "masukan data:";
+        cin >> a;
+    for (int i=0; i<a; i++){
+        cout << " <<<< Anda Memilih Hewan Darat >>>> " << endl << endl;
+        cout << "  Nama Hewan: ";
+        getline(cin.ignore(),(hewan_darat.darat.Nama_hewan));
+        cout << "  Jenis Kelamin: " ;
+        cin  >> hewan_darat.darat.jeniskelamin;
+        cout << "  Cara Berkembang Biak: ";
+        cin  >> hewan_darat.darat.caraberkembangbiak;
+        cout << "  Alat Pernafasan: " ;
+        cin  >> hewan_darat.darat.alatpernafasan;
+        cout << "  Tempat Hidup: " ;
+        cin  >> hewan_darat.darat.tempathidup;
+        cout << "  Apakah Karnivora(1/0): ";
+        cin  >> hewan_darat.darat.Karnivora;
+        cout << "  Jumlah Kaki: ";
+        cin  >> hewan_darat.jumlahkaki;
+        cout << "  Apakah menyusui: ";
+        cin  >> hewan_darat.apakahmenyusui;
+        cout << "  Suara: ";
+        getline(cin.ignore(),( hewan_darat.suara));
+    }
+         system ("CLS");
+
+           for (int i=0; i<a; i++){
+            cout << "=====================================" << endl;
+            cout << "               HEWAN DARAT           " << endl;
+            cout << "=====================================" << endl;
+            cout << " 1. Hewan ini bernama : " << hewan_darat.darat.Nama_hewan << endl;
+            cout << " 2. berjenis kelamin : " <<hewan_darat.darat.jeniskelamin << endl;
+            cout << " 3. Berkembang biak dengan cara : "<< hewan_darat.darat.caraberkembangbiak << endl;
+            cout << " 4. Bernafas menggunakan : " << hewan_darat.darat.alatpernafasan << endl;
+            cout << " 5. Termasuk jenis hewan karnivora?(1/0) : ";
+                if (hewan_darat.darat.Karnivora == true){
+                    cout << " IYA " << endl;
+                    } else {
+                    cout << " TIDAK " << endl;
+                    }
+            cout << " 6. Jumlah kakinya : " << hewan_darat.jumlahkaki << endl;
+            cout << " 7. Apakah Menyusui : " ;
+                  if (hewan_darat.apakahmenyusui == true ){
+                        cout << " IYA " << endl;
+                        } else {
+                        cout << " TIDAK " << endl;
+                        }
+            cout << " 8. Suaranya seperti: " << hewan_darat.suara << endl;
+        }
+
+        break;
+    }
+    cout << endl;
+    cout<<"Kembali ke Menu utama?(1/2)";
+    cin>>pilihan;
+    }while((pilihan==1) || (pilihan== 2));
+
+    return 0;
+
+}
