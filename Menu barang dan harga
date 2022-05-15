@@ -1,0 +1,47 @@
+// Bunga Laelatul Muna
+// 21102010
+
+#include <iostream>
+
+using namespace std;
+
+struct nota
+{
+    string namabarang, kode;
+    int stok,harga;
+};
+
+int main()
+{
+    nota brg [10];
+    cout << endl;
+    for (int i=0; i<10; i++){
+        cout << "=========================================" << endl;
+        cout << "Data ke-" << i+1 << endl;
+        cout << "Nama Barang     : " ;
+        getline(cin.ignore(),( brg[i].namabarang));
+        cout << "Kode Barang     : ";
+        cin  >> brg[i].kode;
+        cout << "Harga Barang    : " ;
+        cin  >> brg[i].harga ;
+        cout << "Stok tersedia   : " ;
+        cin  >> brg[i].stok ;
+    }
+
+
+    cout << "=========================================" << endl;
+    cout << "           TAMPIL DATA BARANG            " << endl;
+    cout << "=========================================" << endl;
+    for (int i=0; i<10; i++){
+        cout << endl;
+        cout << "Data ke" << i+1 << endl ;
+        cout << ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" << endl;
+        cout << " " <<brg[i].namabarang << endl;
+        cout << " " <<brg[i].kode << endl;
+        cout << " " <<brg[i].harga << endl;
+        cout << " " <<brg[i].stok << endl;
+    }
+
+
+    return 0;
+}
